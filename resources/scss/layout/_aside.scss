@@ -12,8 +12,14 @@
         color: black;
         padding: 0.5rem 1.5rem;
         text-transform: uppercase;
+        border-left: 4px solid transparent;
 
         &:hover {
+            background-color: #ACDEE7;
+        }
+
+        &.active {
+            border-left: 4px solid black;
             background-color: #ACDEE7;
         }
     }

@@ -15,6 +15,22 @@
     @include('layouts.aside')
 
     <main class="main">
+        @if ($errors->any())
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+
+        @if (session()->has('success'))
+            <div>Успешно! {{ session('success') }}</div>
+        @endif
+
+        @auth
+            Вы авторизованы как: {{ auth()->user()->name }}
+        @endauth
+
         @yield('content')
     </main>
 
