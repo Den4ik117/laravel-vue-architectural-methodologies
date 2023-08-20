@@ -1,3 +1,15 @@
 [v-cloak] {
     display: none;
 }
+
+.wrapper {
+    display: grid;
+    grid-template: 'header header' 100px
+                   'aside main' 1fr
+                   'footer footer' 100px / 300px 1fr;
+    min-height: 100vh;
+
+    & > * {
+        min-width: 0;
+    }
+}

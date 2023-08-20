@@ -14,7 +14,9 @@
 
     @include('layouts.aside')
 
-    @yield('content')
+    <main class="main">
+        @yield('content')
+    </main>
 
     @include('layouts.footer')
 </div>
